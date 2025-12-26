@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajveer Editz | Video Editor</title>
+    <meta name="description"
+        content="Portfolio of Rajveer Editz - Professional Video Editor, Thumbnails, and Motion Graphics.">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Floating Nav -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#" class="active">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 class="hero-title">Rajveer<br>Editz</h1>
+        <div class="hero-subtitle-container">
+            <span class="hero-role">Video Editor</span>
+            <span class="hero-separator"></span>
+            <span class="hero-exp">Storyteller</span>
+            <span class="hero-separator"></span>
+            <span class="hero-exp">Visual Artist</span>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fa-solid fa-chevron-down" style="color:white; font-size: 1.5rem;"></i>
+        </div>
+    </header>
+
+    <!-- Projects Section (Priority now) -->
+    <section id="projects" class="section">
+        <div class="section-header">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">Latest Masterpieces</h2>
+        </div>
+
+        <!-- Filters -->
+        <div style="text-align:center;">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="video">Videos</button>
+                <button class="filter-btn" data-filter="shorts">Shorts</button>
+                <button class="filter-btn" data-filter="thumbnail">Designs</button>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+            <!-- Dynamic Content -->
+            <div class="loading-spinner">Loading...</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="section-header">
+            <span class="section-tag">Capabilities</span>
+            <h2 class="section-title">What I Do</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-film"></i>
+                <h3>Video Editing</h3>
+                <p>Pacing, rhythm, and storytelling that keeps viewers hooked.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-image"></i>
+                <h3>Thumbnails</h3>
+                <p>High CTR designs that demand to be clicked.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Short Form</h3>
+                <p>Dynamic editing for TikTok, Reels, and Shorts.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Motion Graphics</h3>
+                <p>Custom animations to elevate production value.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <span class="section-tag">About Me</span>
+            <h2 class="section-title">Behind The Timeline</h2>
+            <p style="max-width: 600px; color: var(--text-muted); margin-top: 1rem; line-height: 1.8;">
+                I don't just cut footage; I craft experiences. With over 2 years of deep dive into the editing world,
+                I understand the psychology of retention. My goal is to make every frame count.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title">Let's Create</h2>
+        </div>
+        <div class="contact-card-container">
+            <a href="#" class="contact-card">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="#" class="contact-card">
+                <i class="fa-envelope"></i> Send Email
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Rajveer Editz. Designed for Impact.</p>
+    </footer>
+
+    <!-- Video Popup Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="modal-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Popup Modal -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content image-modal-content">
+            <span class="close-modal-img">&times;</span>
+            <img id="modal-image" src="" alt="Project Preview">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
